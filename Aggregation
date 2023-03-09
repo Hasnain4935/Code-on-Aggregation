@@ -1,0 +1,136 @@
+1.public class AddressInfo {
+    String street,city,state,postalCode;
+
+    public AddressInfo(String street, String city,String state,String postalCode)
+    {
+        this.street=street;
+        this.city=city;
+        this.state=state;
+        this.postalCode=postalCode;
+    }
+}
+public class InsuranceInfo {
+    String policyName;
+    int policyId;
+    public InsuranceInfo(String policyName, int policyId)
+    {
+        this.policyId=policyId;
+        this.policyName=policyName;
+    }
+}
+
+public class Employeee {
+    String name;
+    AddressInfo addressInfo;
+    InsuranceInfo insuranceInfo;
+    public Employeee(String name, AddressInfo addressInfo, InsuranceInfo insuranceInfo)
+    {
+        this.name=name;
+        this.addressInfo=addressInfo;
+        this.insuranceInfo=insuranceInfo;
+
+    }
+    public void display()
+    {
+        System.out.println("Name of Employee : "+this.name);
+        System.out.println("Address of Employee: "+
+                addressInfo.street+", "+addressInfo.city+", "+
+                addressInfo.state+", "+addressInfo.postalCode);
+        System.out.println("Insurance information: "+
+                insuranceInfo.policyName+", "+insuranceInfo.policyId);
+    }
+
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        AddressInfo addressInfo= new AddressInfo("Sector 4", "Uttara", "Dhaka", "1711");
+        InsuranceInfo insuranceInfo =new InsuranceInfo("Life Insurance", 123);
+        Employeee employeee =new Employeee("Mr. Rahim",addressInfo, insuranceInfo );
+        employeee.display();
+    }
+}
+
+
+
+
+
+
+2.public class Engine {
+   public double capacity;
+   public Engine(double capacity)
+   {
+       this.capacity=capacity;
+   }
+}
+
+
+
+public class DashBoard {
+   public double size;
+   public DashBoard(double size)
+   {
+       this.size=size;
+   }
+
+
+public class Car1 {
+   public String model;
+   public String company;
+
+    public void drive() {
+       System.out.println("Driving");
+   }
+   public void stop()
+   {
+       System.out.println("Stopping");
+   }
+
+   
+}
+
+
+public class Volvo extends Car1{
+   double price;
+   String productionYear;
+   String registrationNumber;
+   Engine eng;
+   DashBoard db;
+   public Volvo(double price, String productionYear, String registrationNumber, Engine eng, DashBoard db)
+   {
+       this.price=price;
+       this.productionYear=productionYear;
+       this.registrationNumber=registrationNumber;
+       this.eng=eng;
+       this.db=db;
+   }
+   public void changeFuel()
+   {
+       System.out.println("Changing Fuel");
+   }
+   public void checkBattery()
+   {
+       System.out.println("Checking battery");
+   }
+   @Override
+  }
+
+
+public class Main {
+   public static void main(String[] args) {
+       Engine eng = new Engine(34.7);
+       DashBoard db= new DashBoard(5.0);
+       Volvo v=new Volvo(700,"2022", "DHA34567",eng,db);
+       v.drive();
+       v.stop();
+       v.changeFuel();
+       v.checkBattery();
+       v.model="SUV. XC40";
+       v.company="Volvo";
+
+   }
+}
+
+
+
